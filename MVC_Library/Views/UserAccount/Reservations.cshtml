@@ -1,0 +1,85 @@
+﻿@using MVC_Library.Data.Enums
+@model IEnumerable<Lease>
+
+@{
+    ViewBag.SearchString = Context.Request.Query["searchString"];
+    var showDeclined = Context.Request.Query["showDeclined"] == "true";
+    var showActive = Context.Request.Query["showActive"] == "true";
+    var showAwaiting = Context.Request.Query["showAwaiting"] == "true";
+    var showClosed = Context.Request.Query["showClosed"] == "true";
+}
+
+<div style="margin-top: 20px;"></div>
+
+<div class="mb-3">
+    <form method="get" class="d-flex align-items-center flex-wrap">
+        <input type="search" name="searchString" class="form-control me-2" placeholder="Book Name..." aria-label="Search" value="@ViewBag.SearchString" style="width: 250px;">
+        <button type="submit" class="btn btn-primary me-2">Search</button>
+
+        <div class="form-check me-3">
+            <input type="checkbox" name="showAwaiting" class="form-check-input" id="showAwaiting" value="true" @(showAwaiting ? "checked" : "")>
+            <label class="form-check-label text-warning" for="showAwaiting">Awaiting</label>
+        </div>
+        <div class="form-check me-3">
+            <input type="checkbox" name="showActive" class="form-check-input" id="showActive" value="true" @(showActive ? "checked" : "")>
+            <label class="form-check-label text-success" for="showActive">Active</label>
+        </div>
+        <div class="form-check me-3">
+            <input type="checkbox" name="showClosed" class="form-check-input" id="showClosed" value="true" @(showClosed ? "checked" : "")>
+            <label class="form-check-label text-primary" for="showClosed">Closed</label>
+        </div>
+        <div class="form-check me-3">
+            <input type="checkbox" name="showDeclined" class="form-check-input" id="showDeclined" value="true" @(showDeclined ? "checked" : "")>
+            <label class="form-check-label text-danger" for="showDeclined">Declined</label>
+        </div>
+    </form>
+</div>
+
+<div style="margin-top: 20px;"></div>
+<ul class="list-group list-group-light">
+    @foreach (var item in Model)
+    {
+        @if(item != null)
+        {
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                    <div class="fw-bold">@item.Book.Title</div>
+                    <div class="text-muted">@item.LeaseDate</div>
+                </div>
+                <div class="align-items-center">
+                    @switch (item.State)
+                    {
+                        case LeaseState.Reservation:
+                            <form method="post" asp-action="DeleteReservation" asp-controller="UserAccount" asp-route-id="@item.Id" class="d-inline">
+                                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                            </form>
+                            <span class="badge text-bg-warning badge-length me-2" style="margin-left: 8px;">Awaiting</span>
+                            break;
+
+                        case LeaseState.Declined:
+                            <span class="badge text-bg-danger badge-length me-2" style="margin-left: 8px;">Declined</span>
+                            break;
+
+                        case LeaseState.Active:
+                            <span class="badge text-bg-success badge-length me-2" style="margin-left: 8px;">Active</span>
+                            break;
+
+                        case LeaseState.Closed:
+                            <span class="badge text-bg-primary badge-length me-2" style="margin-left: 8px;">Closed</span>
+                            break;
+                    }
+                </div>
+            </li>
+        }
+    }
+</ul>
+<nav aria-label="Page navigation" class="mt-4">
+    <ul class="pagination justify-content-center">
+        @for (int i = 1; i <= ViewBag.TotalPages; i++)
+        {
+            <li class="page-item @(ViewBag.CurrentPage == i ? "active" : "")">
+                <a class="page-link mx-1" href="@Url.Action("Reservations", new { page = i, searchString = ViewBag.SearchString })">@i</a>
+            </li>
+        }
+    </ul>
+</nav>
