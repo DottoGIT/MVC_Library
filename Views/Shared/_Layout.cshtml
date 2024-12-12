@@ -1,0 +1,99 @@
+﻿@using MVC_Library.Data
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MVC_Library</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MVC_Library.styles.css" asp-append-version="true" />
+    <link href="badges.css" rel="stylesheet">
+</head>
+<body>
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li>
+                        <a asp-controller="Home" asp-action="Index" class="nav-link px-2 fw-bold @(ViewContext.RouteData.Values["controller"]?.ToString() == "Home" && ViewContext.RouteData.Values["action"]?.ToString() == "Index" ? "text-warning" : "text-white")">Home</a>
+                    </li>
+
+                    @if(User != null && User.Identity.IsAuthenticated && User.IsInRole(UserRoles.User))
+                    {
+                        <li>
+                            <a asp-controller="UserAccount" asp-action="Reservations" class="nav-link px-2 @(ViewContext.RouteData.Values["controller"]?.ToString() == "MyReservations" ? "text-warning" : "text-white")">Reservations</a>
+                        </li>
+                        <li>
+                            <a asp-controller="UserAccount" asp-action="Index" class="nav-link px-2 @(ViewContext.RouteData.Values["controller"]?.ToString() == "MyAccount" ? "text-warning" : "text-white")">Account</a>
+                        </li>
+                    }
+                    else if (User.Identity.IsAuthenticated && User.IsInRole(UserRoles.Librarian))
+                    {
+                        <li>
+                            <a asp-controller="ManageBooks" asp-action="Index" class="nav-link px-2 @(ViewContext.RouteData.Values["controller"]?.ToString() == "Book" ? "text-warning" : "text-white")">Books</a>
+                        </li>
+                        <li>
+                            <a asp-controller="ManageLeases" asp-action="Index" class="nav-link px-2 @(ViewContext.RouteData.Values["controller"]?.ToString() == "Lease" ? "text-warning" : "text-white")">Leases</a>
+                        </li>
+                        <li>
+                            <a asp-controller="ManageUsers" asp-action="Index" class="nav-link px-2 @(ViewContext.RouteData.Values["controller"]?.ToString() == "User" ? "text-warning" : "text-white")">Users</a>
+                        </li>
+                    }
+                </ul>
+                    <div class="d-flex justify-content-end align-items-center">
+
+                        @if(!User.Identity.IsAuthenticated)
+                        {
+                            <div class="text-end">
+                                <a class="btn btn-outline-light me-2" asp-controller="Login" asp-action="Login">Login</a>
+                                <a class="btn btn-warning" asp-controller="Login" asp-action="Create">Sign-up</a>
+                            </div>
+                        }else
+                        {
+                            <div class="me-3">
+                                <p class="fw-bold text-warning mb-0">Hello, @User.Identity.Name!</p>
+                            </div>
+                            <div>
+                                <a class="btn btn-outline-light btn-sm" asp-controller="Login" asp-action="Logout">
+                                    <i class="fas fa-sign-out-alt"></i> Logout
+                                </a>
+                            </div>
+                        }
+                    </div>
+    
+
+            </div>
+        </div>
+    </header>
+
+
+    @if (TempData["ResultMessage"] != null)
+    {
+        <script>
+            window.onload = function () {
+                alert('@TempData["ResultMessage"]');
+            };
+        </script>
+    }
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="bg-body-tertiary text-center text-lg-start">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            <p>Author: Maciej Scheffer</p>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
