@@ -18,6 +18,16 @@ builder.Services.AddDbContext<AppDatabaseContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReactApp", policy =>
+    {
+        policy.WithOrigins("http://localhost:3000")  // Allow requests from React app running on port 3000
+              .AllowAnyHeader()                      // Allow any header in the request
+              .AllowAnyMethod();                     // Allow any HTTP method (GET, POST, etc.)
+    });
+});
+
 
 builder.Services.AddIdentity<User, IdentityRole>()
     .AddEntityFrameworkStores<AppDatabaseContext>();
@@ -27,28 +37,28 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 
 var app = builder.Build();
 
-using (var serviceScope = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope())
-{
-    var logger = serviceScope.ServiceProvider.GetRequiredService<ILogger<Program>>();
-    var db = serviceScope.ServiceProvider.GetRequiredService<AppDatabaseContext>().Database;
+//using (var serviceScope = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope())
+//{
+//    var logger = serviceScope.ServiceProvider.GetRequiredService<ILogger<Program>>();
+//    var db = serviceScope.ServiceProvider.GetRequiredService<AppDatabaseContext>().Database;
 
-    logger.LogInformation("Migrating database...");
-    while (!db.CanConnect())
-    {
-        logger.LogInformation("Database not ready yet; waiting...");
-        Thread.Sleep(1000);
-    }
+//    logger.LogInformation("Migrating database...");
+//    while (!db.CanConnect())
+//    {
+//        logger.LogInformation("Database not ready yet; waiting...");
+//        Thread.Sleep(1000);
+//    }
 
-    try
-    {
-        serviceScope.ServiceProvider.GetRequiredService<AppDatabaseContext>().Database.Migrate();
-        logger.LogInformation("Database migrated successfully.");
-    }
-    catch (Exception ex)
-    {
-        logger.LogError(ex, "An error occurred while migrating the database.");
-    }
-}
+//    try
+//    {
+//        serviceScope.ServiceProvider.GetRequiredService<AppDatabaseContext>().Database.Migrate();
+//        logger.LogInformation("Database migrated successfully.");
+//    }
+//    catch (Exception ex)
+//    {
+//        logger.LogError(ex, "An error occurred while migrating the database.");
+//    }
+//}
 
 await Seed.SeedUsersAndRolesAsync(app);
 Seed.SeedData(app);
@@ -66,6 +76,7 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseCors("AllowReactApp");
 
 app.MapControllerRoute(
     name: "default",
