@@ -1,8 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Razor.TagHelpers;
-using MVC_Library.Data;
 using MVC_Library.Data.Enums;
 using MVC_Library.Data.Interfaces;
 using MVC_Library.Models;
@@ -10,17 +7,14 @@ using MVC_Library.ViewModel;
 
 namespace MVC_Library.Controllers
 {
-    [Authorize(Roles = UserRoles.User)]
     public class UserAccountController : Controller
     {
-        private readonly IUserRepository _userRepository;
         private readonly ILeaseRepository _leaseRepository;
         private readonly UserManager<User> _userManager;
         private readonly int _pageSize = 9;
 
-        public UserAccountController(IUserRepository userRepository, ILeaseRepository leaseRepository, UserManager<User> userManager)
+        public UserAccountController(ILeaseRepository leaseRepository, UserManager<User> userManager)
         {
-            _userRepository = userRepository;
             _leaseRepository = leaseRepository;
             _userManager = userManager;
         }
@@ -66,7 +60,7 @@ namespace MVC_Library.Controllers
             Lease lease = new Lease()
             {
                 LeaseDate = DateTime.Now,
-                State = Data.Enums.LeaseState.Reservation,
+                State = LeaseState.Reservation,
                 UserId = leaseVM.UserId,
                 BookId = leaseVM.BookId
             };

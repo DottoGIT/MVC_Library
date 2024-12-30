@@ -1,13 +1,6 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using Microsoft.Extensions.DependencyInjection;
-using MVC_Library.Models;
+﻿using MVC_Library.Models;
 using MVC_Library.Data.Enums;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
+using System.Security.Claims;
 using Microsoft.AspNetCore.Identity;
 
 namespace MVC_Library.Data
@@ -318,22 +311,13 @@ namespace MVC_Library.Data
         }
 
 
-        public static async Task SeedUsersAndRolesAsync(IApplicationBuilder applicationBuilder)
+        public static async Task SeedUsers(IApplicationBuilder applicationBuilder)
         {
             using (var serviceScope = applicationBuilder.ApplicationServices.CreateScope())
             {
-                //Roles
-                var roleManager = serviceScope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-
-                if (!await roleManager.RoleExistsAsync(UserRoles.Librarian))
-                    await roleManager.CreateAsync(new IdentityRole(UserRoles.Librarian));
-                if (!await roleManager.RoleExistsAsync(UserRoles.User))
-                    await roleManager.CreateAsync(new IdentityRole(UserRoles.User));
-
-                //Users
                 var userManager = serviceScope.ServiceProvider.GetRequiredService<UserManager<User>>();
-                string adminUserEmail = "admin@wp.pl";
 
+                string adminUserEmail = "admin@wp.pl";
                 var adminUser = await userManager.FindByEmailAsync(adminUserEmail);
                 if (adminUser == null)
                 {
@@ -344,9 +328,9 @@ namespace MVC_Library.Data
                         UserName = "admin",
                         Email = adminUserEmail,
                         EmailConfirmed = true,
+                        Role = UserRole.Librarian
                     };
                     await userManager.CreateAsync(newAdminUser, "Hasło1234$");
-                    await userManager.AddToRoleAsync(newAdminUser, UserRoles.Librarian);
                 }
 
                 string admin2UserEmail = "admin2@wp.pl";
@@ -360,9 +344,9 @@ namespace MVC_Library.Data
                         UserName = "admin2",
                         Email = admin2UserEmail,
                         EmailConfirmed = true,
+                        Role = UserRole.Librarian
                     };
                     await userManager.CreateAsync(newAdmin2User, "Hasło1234$");
-                    await userManager.AddToRoleAsync(newAdmin2User, UserRoles.Librarian);
                 }
 
                 string appUserEmail = "stachstrach@gmail.pl";
@@ -376,11 +360,14 @@ namespace MVC_Library.Data
                         LastName = "Tatar",
                         Email = appUserEmail,
                         EmailConfirmed = true,
+                        Role = UserRole.User
                     };
                     await userManager.CreateAsync(newAppUser, "Hasło4321$");
-                    await userManager.AddToRoleAsync(newAppUser, UserRoles.User);
+
                 }
             }
         }
+
+
     }
 }

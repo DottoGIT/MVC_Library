@@ -1,14 +1,17 @@
-using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using MVC_Library.Data;
 using MVC_Library.Data.Interfaces;
 using MVC_Library.Models;
 using MVC_Library.Repository;
+using System.Text;
+
 
 var builder = WebApplication.CreateBuilder(args);
+var config = builder.Configuration;
 
-builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IBookRepository, BookRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ILeaseRepository, LeaseRepository>();
@@ -16,24 +19,52 @@ builder.Services.AddHostedService<LeaseUpdaterService>();
 
 builder.Services.AddDbContext<AppDatabaseContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+    options.UseSqlServer(config.GetConnectionString("DefaultConnection"));
 });
+
+
+// CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp", policy =>
     {
-        policy.WithOrigins("http://localhost:3000")  // Allow requests from React app running on port 3000
-              .AllowAnyHeader()                      // Allow any header in the request
-              .AllowAnyMethod();                     // Allow any HTTP method (GET, POST, etc.)
+        policy.WithOrigins("http://localhost:3000")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
     });
 });
 
+// JWT
+builder.Services.AddAuthentication(x =>
+{
+    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    x.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(x =>
+{
+    x.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = config["JwtSettings:Issuer"],
+        ValidAudience = config["JwtSettings:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["JwtSettings:Key"]!))
+    };
+});
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy(JWT_Identity.LibrarianPolicyName, p =>
+        p.RequireClaim("Role", "Librarian"));
+});
 
 builder.Services.AddIdentity<User, IdentityRole>()
-    .AddEntityFrameworkStores<AppDatabaseContext>();
-builder.Services.AddMemoryCache();
-builder.Services.AddSession();
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
+                .AddEntityFrameworkStores<AppDatabaseContext>();
+
+builder.Services.AddControllersWithViews();
+builder.Services.AddEndpointsApiExplorer();
 
 var app = builder.Build();
 
@@ -60,7 +91,7 @@ var app = builder.Build();
 //    }
 //}
 
-await Seed.SeedUsersAndRolesAsync(app);
+await Seed.SeedUsers(app);
 Seed.SeedData(app);
 
 
@@ -72,11 +103,11 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
+app.UseCors("AllowReactApp");
+
 app.UseAuthentication();
 app.UseAuthorization();
-app.UseCors("AllowReactApp");
 
 app.MapControllerRoute(
     name: "default",

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MVC_Library.Migrations
 {
     [DbContext(typeof(AppDatabaseContext))]
-    [Migration("20241202161727_Init")]
-    partial class Init
+    [Migration("20241230200250_JWT_Migration_With_Identity")]
+    partial class JWT_Migration_With_Identity
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -145,6 +145,9 @@ namespace MVC_Library.Migrations
 
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
+
+                    b.Property<int>("Role")
+                        .HasColumnType("int");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");

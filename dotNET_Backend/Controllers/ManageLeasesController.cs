@@ -12,7 +12,6 @@ using static System.Reflection.Metadata.BlobBuilder;
 
 namespace MVC_Library.Controllers
 {
-    [Authorize(Roles = UserRoles.Librarian)]
     public class ManageLeasesController : Controller
     {
         private readonly ILeaseRepository _leaseRepository;

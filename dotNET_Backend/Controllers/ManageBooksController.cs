@@ -11,7 +11,6 @@ using System.Collections;
 
 namespace MVC_Library.Controllers
 {
-    //[Authorize(Roles = UserRoles.Librarian)]
     [ApiController]
     [Route("api/[controller]")]
     public class ManageBooksController : Controller
@@ -97,6 +96,7 @@ namespace MVC_Library.Controllers
 
 
         [HttpDelete("{id}")]
+        [Authorize(Policy = JWT_Identity.LibrarianPolicyName)]
         public async Task<IActionResult> Delete(int id)
         {
             var book = await _bookRepository.GetByIdAsync(id);

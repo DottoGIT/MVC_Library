@@ -11,7 +11,6 @@ using static System.Reflection.Metadata.BlobBuilder;
 
 namespace MVC_Library.Controllers
 {
-    [Authorize(Roles = UserRoles.Librarian)]
     public class ManageUsersController : Controller
     {
         private readonly IUserRepository _userRepository;

@@ -1,37 +1,40 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using MVC_Library.Data;
+using MVC_Library.Data.Enums;
 using MVC_Library.Data.Interfaces;
 using MVC_Library.Models;
 using MVC_Library.ViewModel;
+using System.IdentityModel.Tokens.Jwt;
+using System.Text;
+using System.Security.Claims;
+using Microsoft.IdentityModel.Tokens;
+
 
 namespace MVC_Library.Controllers
 {
+    [ApiController]
+    [Route("api/auth")]
     public class LoginController : Controller
     {
-
         private readonly SignInManager<User> _signInManager;
         private readonly UserManager<User> _userManager;
         private readonly ILeaseRepository _leaseRepository;
+        private readonly IConfiguration _configuration;
 
-        public LoginController(UserManager<User> userManager, SignInManager<User> signInManager, ILeaseRepository leaseRepository)
+        public LoginController(UserManager<User> userManager, SignInManager<User> signInManager, ILeaseRepository leaseRepository, IConfiguration configuration)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _leaseRepository = leaseRepository;
+            _configuration = configuration;
         }
 
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        [HttpPost]
+        [HttpPost("register")]
         public async Task<IActionResult> Create(UserRegisterVM registerVM)
         {
             if (!ModelState.IsValid)
             {
-                return View(registerVM);
+                return BadRequest(ModelState);
             }
 
             var user = await _userManager.FindByEmailAsync(registerVM.Email);
@@ -39,18 +42,15 @@ namespace MVC_Library.Controllers
 
             if (user != null)
             {
-                TempData["ResultMessage"] = "This email address is already is use";
-                return View(registerVM);
+                return Conflict("This email address is already in use");
             }
             if (nick != null)
             {
-                TempData["ResultMessage"] = "This username is already is use";
-                return View(registerVM);
+                return Conflict("This username is already in use");
             }
             if (registerVM.Password != registerVM.ConfirmPassword)
             {
-                TempData["ResultMessage"] = "Passwords dont match";
-                return View(registerVM);
+                return BadRequest("Passwords don't match");
             }
 
             var newUser = new User()
@@ -58,103 +58,94 @@ namespace MVC_Library.Controllers
                 UserName = registerVM.UserName,
                 Email = registerVM.Email,
                 FirstName = registerVM.FirstName,
-                LastName = registerVM.LastName
+                LastName = registerVM.LastName,
+                Role = UserRole.User
             };
+
             var newUserResponse = await _userManager.CreateAsync(newUser, registerVM.Password);
-            if (newUserResponse.Succeeded)
+            if (!newUserResponse.Succeeded)
             {
-                var setRole = await _userManager.AddToRoleAsync(newUser, UserRoles.User);
-                if (setRole.Succeeded)
-                {
-                    var result = await _signInManager.PasswordSignInAsync(newUser, registerVM.Password, false, false);
-                    if (result.Succeeded)
-                    {
-                        return RedirectToAction("Index", "Home");
-                    }
-                    else
-                    {
-                        TempData["ResultMessage"] = "User sign in assignment failed.";
-                        return View(registerVM);
-                    }
-                }
-                else
-                {
-                    TempData["ResultMessage"] = "User role assignment failed.";
-                    return View(registerVM);
-                }
+                return BadRequest($"User creation failed: {string.Join(", ", newUserResponse.Errors.Select(e => e.Description))}");
             }
-            else
-            {
-                TempData["ResultMessage"] = "User creation failed: " + string.Join(", ", newUserResponse.Errors.Select(e => e.Description));
-                return View(registerVM);
-            }
+
+            var token = GenerateJwtToken(newUser);
+            return Ok(new { token, user = new { newUser.UserName, newUser.Email, newUser.FirstName, newUser.LastName } });
         }
 
-
-        public IActionResult Login()
-        {
-            return View();
-        }
-
-        [HttpPost]
+        [HttpPost("login")]
         public async Task<IActionResult> Login(UserLoginVM loginVM)
         {
             if (!ModelState.IsValid)
             {
-                TempData["ResultMessage"] = "Wrong credentials please try again";
-                return View(loginVM);
+                return BadRequest(new { message = "Invalid data, please check your input." });
             }
 
             var user = await _userManager.FindByNameAsync(loginVM.UserName);
-            if (user != null)
+            if (user == null)
             {
-                var passowrdCheck = await _userManager.CheckPasswordAsync(user, loginVM.Password);
-                if (passowrdCheck)
-                {
-                    var result = await _signInManager.PasswordSignInAsync(user, loginVM.Password, false, false);
-                    if (result.Succeeded)
-                    {
-                        return RedirectToAction("Index", "Home");
-                    }
-                }
+                return Unauthorized(new { message = "Invalid username or password." });
             }
-            TempData["ResultMessage"] = "Wrong credentials please try again";
-            return View(loginVM);
+
+            var passwordCheck = await _userManager.CheckPasswordAsync(user, loginVM.Password);
+            if (!passwordCheck)
+            {
+                return Unauthorized(new { message = "Invalid username or password." });
+            }
+
+            var token = GenerateJwtToken(user);
+            return Ok(new { token, user = new { user.UserName, user.Email, user.FirstName, user.LastName } });
         }
 
-        public async Task<IActionResult> Logout()
-        {
-            await _signInManager.SignOutAsync();
-            return RedirectToAction("Index", "Home");
-        }
 
+        [HttpPost("delete")]
         public async Task<IActionResult> Delete()
         {
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
-                TempData["ResultMessage"] = "Account deletion was unsuccessful. Please try again later.";
-                return RedirectToAction("Index", "Home");
+                return BadRequest(new { message = "Account deletion was unsuccessful. Please try again later." });
             }
 
             bool hasLeases = _leaseRepository.UserHasLeases(user.Id);
             if (hasLeases)
             {
-                TempData["ResultMessage"] = "You cannot delete your account because you have registered reservations";
-                return RedirectToAction("Index", "UserAccount");
+                return BadRequest(new { message = "You cannot delete your account because you have registered reservations." });
             }
-
-            await _signInManager.SignOutAsync();
 
             var result = await _userManager.DeleteAsync(user);
             if (result.Succeeded)
             {
-                TempData["ResultMessage"] = "Account deletion was successful.";
-                return RedirectToAction("Index", "Home");
+                return Ok(new { message = "Account deletion was successful." });
             }
 
-            TempData["ResultMessage"] = "Account deletion was unsuccessful. Please try again later.";
-            return RedirectToAction("Index", "Home");
+            return BadRequest(new { message = "Account deletion was unsuccessful. Please try again later." });
         }
+
+        private string GenerateJwtToken(User user)
+        {
+            var claims = new List<Claim>();
+            if (user.Role == UserRole.Librarian)
+            {
+                claims.Add(new Claim("Role", "Librarian"));
+            }
+            else
+            {
+                claims.Add(new Claim("Role", "User"));
+            }
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtSettings:Key"]!));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var token = new JwtSecurityToken(
+                issuer: _configuration["JwtSettings:Issuer"],
+                audience: _configuration["JwtSettings:Audience"],
+                claims: claims,
+                expires: DateTime.Now.AddHours(1),
+                signingCredentials: creds
+            );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
     }
 }

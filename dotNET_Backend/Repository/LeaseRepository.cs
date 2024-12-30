@@ -4,7 +4,6 @@ using MVC_Library.Data.Enums;
 using MVC_Library.Data.Interfaces;
 using MVC_Library.Models;
 using System.Data;
-using System.Linq;
 
 namespace MVC_Library.Repository
 {

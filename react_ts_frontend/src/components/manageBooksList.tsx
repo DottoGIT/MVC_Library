@@ -13,7 +13,6 @@ const ManageBooksList: React.FC<PropsFromRedux> = ({ booksList, pagination, fetc
   const [showModal, setShowModal] = useState<boolean>(false);
   const [bookToEdit, setBookToEdit] = useState<Book | undefined>(undefined);
 
-
   useEffect(() => {
     fetchBooks(searchString, currentPage);
   }, [fetchBooks, searchString, currentPage]);

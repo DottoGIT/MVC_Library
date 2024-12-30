@@ -46,7 +46,7 @@ type ThunkAction = (dispatch: React.Dispatch<BookAction>) => void;
 
 export const fetch = (searchString: string, page: number): ThunkAction => {
   return (dispatch) => {
-    api.bookAPI()
+    api.bookAPI
       .fetch(searchString, page)
       .then((response) => {
         console.log(response);
@@ -66,7 +66,7 @@ export const fetch = (searchString: string, page: number): ThunkAction => {
 
 export const deleteBook = (id: number): ThunkAction => {
   return (dispatch) => {
-    api.bookAPI()
+    api.bookAPI
       .delete(id)
       .then(() => {
         dispatch({
@@ -82,7 +82,7 @@ export const deleteBook = (id: number): ThunkAction => {
 
 export const markAsUnavailable = (id: number): ThunkAction => {
   return (dispatch) => {
-    api.bookAPI()
+    api.bookAPI
       .markAsUnavailable(id)
       .then(() => {
         dispatch({
@@ -98,7 +98,7 @@ export const markAsUnavailable = (id: number): ThunkAction => {
 
 export const createBook = (book: Book): ThunkAction => {
   return (dispatch) => {
-    api.bookAPI()
+    api.bookAPI
       .create(book)
       .then((response) => {
         dispatch({
@@ -114,7 +114,7 @@ export const createBook = (book: Book): ThunkAction => {
 
 export const updateBook = (id: number, book: Book): ThunkAction => {
   return (dispatch) => {
-    api.bookAPI()
+    api.bookAPI
       .update(id, book)
       .then((response) => {
         dispatch({

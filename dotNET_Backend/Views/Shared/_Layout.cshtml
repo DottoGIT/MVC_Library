@@ -21,17 +21,12 @@
                         <a asp-controller="Home" asp-action="Index" class="nav-link px-2 fw-bold @(ViewContext.RouteData.Values["controller"]?.ToString() == "Home" && ViewContext.RouteData.Values["action"]?.ToString() == "Index" ? "text-warning" : "text-white")">Home</a>
                     </li>
 
-                    @if(User != null && User.Identity.IsAuthenticated && User.IsInRole(UserRoles.User))
-                    {
                         <li>
                             <a asp-controller="UserAccount" asp-action="Reservations" class="nav-link px-2 @(ViewContext.RouteData.Values["controller"]?.ToString() == "MyReservations" ? "text-warning" : "text-white")">Reservations</a>
                         </li>
                         <li>
                             <a asp-controller="UserAccount" asp-action="Index" class="nav-link px-2 @(ViewContext.RouteData.Values["controller"]?.ToString() == "MyAccount" ? "text-warning" : "text-white")">Account</a>
                         </li>
-                    }
-                    else if (User.Identity.IsAuthenticated && User.IsInRole(UserRoles.Librarian))
-                    {
                         <li>
                             <a asp-controller="ManageBooks" asp-action="Index" class="nav-link px-2 @(ViewContext.RouteData.Values["controller"]?.ToString() == "Book" ? "text-warning" : "text-white")">Books</a>
                         </li>
@@ -41,7 +36,6 @@
                         <li>
                             <a asp-controller="ManageUsers" asp-action="Index" class="nav-link px-2 @(ViewContext.RouteData.Values["controller"]?.ToString() == "User" ? "text-warning" : "text-white")">Users</a>
                         </li>
-                    }
                 </ul>
                     <div class="d-flex justify-content-end align-items-center">
 
@@ -63,8 +57,6 @@
                             </div>
                         }
                     </div>
-    
-
             </div>
         </div>
     </header>

@@ -1,10 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MVC_Library.Data;
 using MVC_Library.Data.Enums;
 using MVC_Library.Data.Interfaces;
-using MVC_Library.Models;
 using MVC_Library.ViewModel;
-using System.Diagnostics;
 
 namespace MVC_Library.Controllers
 {

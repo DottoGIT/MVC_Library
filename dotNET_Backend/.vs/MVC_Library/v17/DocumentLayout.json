@@ -3,48 +3,144 @@
   "WorkspaceRootPath": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\controllers\\managebookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:controllers\\managebookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\views\\managebooks\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:views\\managebooks\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\repository\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:repository\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\repository\\leaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:repository\\leaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\views\\managebooks\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:views\\managebooks\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\data\\interfaces\\ileaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:data\\interfaces\\ileaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\controllers\\managebookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:controllers\\managebookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\data\\jwt_identity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:data\\jwt_identity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\data\\seed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:data\\seed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\controllers\\manageleasescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:controllers\\manageleasescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Migrations\\20241230200250_JWT_Migration_With_Identity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20241230200250_JWT_Migration_With_Identity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\data\\appdatabasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:data\\appdatabasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\controllers\\useraccountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:controllers\\useraccountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\viewmodel\\userregistervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:viewmodel\\userregistervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\viewmodel\\userloginvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:viewmodel\\userloginvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\repository\\leaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:repository\\leaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\controllers\\manageuserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:controllers\\manageuserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\data\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:data\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\data\\enums\\leasestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:data\\enums\\leasestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\data\\interfaces\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:data\\interfaces\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Migrations\\20241230182534_JWT_Migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20241230182534_JWT_Migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Migrations\\20241230182032_JWT_Migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20241230182032_JWT_Migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\data\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:data\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\viewmodel\\bookvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:viewmodel\\bookvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\data\\interfaces\\ileaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:data\\interfaces\\ileaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\repository\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:repository\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Migrations\\20241230180900_JWT_Migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20241230180900_JWT_Migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\models\\lease.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:models\\lease.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\views\\managebooks\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:views\\managebooks\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\views\\managebooks\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:views\\managebooks\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\macie\\onedrive\\pulpit\\mvc_library\\dotnet_backend\\viewmodel\\bookvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:viewmodel\\bookvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,33 +154,345 @@
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T21:19:35.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Views\\ManageBooks\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\ManageBooks\\Create.cshtml",
-              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Views\\ManageBooks\\Create.cshtml",
-              "RelativeToolTip": "Views\\ManageBooks\\Create.cshtml",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAswDYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-29T18:55:36.046Z",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAADgAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-29T14:05:11.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Controllers\\LoginController.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAhwHsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T15:34:05.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ManageBooksController.cs",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Controllers\\ManageBooksController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ManageBooksController.cs",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Controllers\\ManageBooksController.cs",
+              "RelativeToolTip": "Controllers\\ManageBooksController.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAswGIAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-29T11:33:05.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-30T18:20:07.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Seed.cs",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Data\\Seed.cs",
+              "RelativeDocumentMoniker": "Data\\Seed.cs",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Data\\Seed.cs",
+              "RelativeToolTip": "Data\\Seed.cs",
+              "ViewState": "AgIAAEoBAAAAAAAAAAAAAEoBAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T15:45:32.427Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Views\\ManageBooks\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\ManageBooks\\Index.cshtml",
-              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Views\\ManageBooks\\Index.cshtml",
-              "RelativeToolTip": "Views\\ManageBooks\\Index.cshtml",
-              "ViewState": "AgIAAA4AAAAAAAAAAADwvxkAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-29T12:47:50.212Z",
+              "Title": "JWT_Identity.cs",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Data\\JWT_Identity.cs",
+              "RelativeDocumentMoniker": "Data\\JWT_Identity.cs",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Data\\JWT_Identity.cs",
+              "RelativeToolTip": "Data\\JWT_Identity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T16:32:46.401Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2024-12-30T20:18:31.441Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-30T18:43:00.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T15:45:24.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Data\\Enums\\UserRole.cs",
+              "RelativeDocumentMoniker": "Data\\Enums\\UserRole.cs",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Data\\Enums\\UserRole.cs",
+              "RelativeToolTip": "Data\\Enums\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T18:54:00.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-30T15:25:56.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserAccountController.cs",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Controllers\\UserAccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserAccountController.cs",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Controllers\\UserAccountController.cs",
+              "RelativeToolTip": "Controllers\\UserAccountController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T19:00:26.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20241230200250_JWT_Migration_With_Identity.cs",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Migrations\\20241230200250_JWT_Migration_With_Identity.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241230200250_JWT_Migration_With_Identity.cs",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Migrations\\20241230200250_JWT_Migration_With_Identity.cs",
+              "RelativeToolTip": "Migrations\\20241230200250_JWT_Migration_With_Identity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T20:02:50.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UserRegisterVM.cs",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\ViewModel\\UserRegisterVM.cs",
+              "RelativeDocumentMoniker": "ViewModel\\UserRegisterVM.cs",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\ViewModel\\UserRegisterVM.cs",
+              "RelativeToolTip": "ViewModel\\UserRegisterVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T19:35:00.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAcwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-30T19:43:47.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ManageLeasesController.cs",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Controllers\\ManageLeasesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ManageLeasesController.cs",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Controllers\\ManageLeasesController.cs",
+              "RelativeToolTip": "Controllers\\ManageLeasesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T18:59:53.429Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ManageUsersController.cs",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Controllers\\ManageUsersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ManageUsersController.cs",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Controllers\\ManageUsersController.cs",
+              "RelativeToolTip": "Controllers\\ManageUsersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T15:34:01.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "LeaseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Repository\\LeaseRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\LeaseRepository.cs",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Repository\\LeaseRepository.cs",
+              "RelativeToolTip": "Repository\\LeaseRepository.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACwAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-29T12:07:19.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "LeaseState.cs",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Data\\Enums\\LeaseState.cs",
+              "RelativeDocumentMoniker": "Data\\Enums\\LeaseState.cs",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Data\\Enums\\LeaseState.cs",
+              "RelativeToolTip": "Data\\Enums\\LeaseState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T18:13:05.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AppDatabaseContext.cs",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Data\\AppDatabaseContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDatabaseContext.cs",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Data\\AppDatabaseContext.cs",
+              "RelativeToolTip": "Data\\AppDatabaseContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T16:32:12.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Repository\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Repository\\UserRepository.cs",
+              "RelativeToolTip": "Repository\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-29T17:10:29.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UserLoginVM.cs",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\ViewModel\\UserLoginVM.cs",
+              "RelativeDocumentMoniker": "ViewModel\\UserLoginVM.cs",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\ViewModel\\UserLoginVM.cs",
+              "RelativeToolTip": "ViewModel\\UserLoginVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T19:34:52.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IBookRepository.cs",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Data\\Interfaces\\IBookRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Interfaces\\IBookRepository.cs",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Data\\Interfaces\\IBookRepository.cs",
+              "RelativeToolTip": "Data\\Interfaces\\IBookRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T18:13:07.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "20241230182032_JWT_Migration.cs",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Migrations\\20241230182032_JWT_Migration.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241230182032_JWT_Migration.cs",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Migrations\\20241230182032_JWT_Migration.cs",
+              "RelativeToolTip": "Migrations\\20241230182032_JWT_Migration.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T18:20:32.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "20241230182534_JWT_Migration.cs",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Migrations\\20241230182534_JWT_Migration.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241230182534_JWT_Migration.cs",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Migrations\\20241230182534_JWT_Migration.cs",
+              "RelativeToolTip": "Migrations\\20241230182534_JWT_Migration.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAHAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T18:25:34.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Data\\Interfaces\\IUserRepository.cs",
               "RelativeDocumentMoniker": "Data\\Interfaces\\IUserRepository.cs",
@@ -97,7 +505,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 29,
+              "Title": "20241230180900_JWT_Migration.cs",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Migrations\\20241230180900_JWT_Migration.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241230180900_JWT_Migration.cs",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Migrations\\20241230180900_JWT_Migration.cs",
+              "RelativeToolTip": "Migrations\\20241230180900_JWT_Migration.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T18:09:00.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
               "Title": "ILeaseRepository.cs",
               "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Data\\Interfaces\\ILeaseRepository.cs",
               "RelativeDocumentMoniker": "Data\\Interfaces\\ILeaseRepository.cs",
@@ -110,72 +531,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ManageBooksController.cs",
-              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Controllers\\ManageBooksController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ManageBooksController.cs",
-              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Controllers\\ManageBooksController.cs",
-              "RelativeToolTip": "Controllers\\ManageBooksController.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-29T11:33:05.855Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-29T14:05:11.904Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 28,
               "Title": "BookRepository.cs",
               "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Repository\\BookRepository.cs",
               "RelativeDocumentMoniker": "Repository\\BookRepository.cs",
               "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Repository\\BookRepository.cs",
               "RelativeToolTip": "Repository\\BookRepository.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAABkAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-29T12:07:12.971Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Repository\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Repository\\UserRepository.cs",
-              "RelativeToolTip": "Repository\\UserRepository.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACUAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-29T17:10:29.787Z",
+              "DocumentIndex": 32,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Views\\ManageBooks\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\ManageBooks\\Create.cshtml",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Views\\ManageBooks\\Create.cshtml",
+              "RelativeToolTip": "Views\\ManageBooks\\Create.cshtml",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAswDYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-29T18:55:36.046Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LeaseRepository.cs",
-              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Repository\\LeaseRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\LeaseRepository.cs",
-              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Repository\\LeaseRepository.cs",
-              "RelativeToolTip": "Repository\\LeaseRepository.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAC4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-29T12:07:19.154Z",
+              "DocumentIndex": 33,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Views\\ManageBooks\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\ManageBooks\\Index.cshtml",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Views\\ManageBooks\\Index.cshtml",
+              "RelativeToolTip": "Views\\ManageBooks\\Index.cshtml",
+              "ViewState": "AgIAAA4AAAAAAAAAAADwvxkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-29T12:47:50.212Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 31,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T16:40:35.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Lease.cs",
+              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Models\\Lease.cs",
+              "RelativeDocumentMoniker": "Models\\Lease.cs",
+              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\Models\\Lease.cs",
+              "RelativeToolTip": "Models\\Lease.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T16:40:36.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
               "Title": "BookVM.cs",
               "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\ViewModel\\BookVM.cs",
               "RelativeDocumentMoniker": "ViewModel\\BookVM.cs",
@@ -184,19 +605,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-29T11:51:14.548Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\macie\\OneDrive\\Pulpit\\MVC_Library\\dotNET_Backend\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAADkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-27T18:16:03.349Z",
               "EditorCaption": ""
             }
           ]
