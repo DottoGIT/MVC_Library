@@ -34,6 +34,9 @@ builder.Services.AddCors(options =>
     });
 });
 
+builder.Services.AddIdentity<User, IdentityRole>()
+                .AddEntityFrameworkStores<AppDatabaseContext>();
+
 // JWT
 builder.Services.AddAuthentication(x =>
 {
@@ -47,7 +50,7 @@ builder.Services.AddAuthentication(x =>
         ValidateIssuer = true,
         ValidateAudience = true,
         ValidateLifetime = true,
-        ValidateIssuerSigningKey = true,
+        ValidateIssuerSigningKey = false,
         ValidIssuer = config["JwtSettings:Issuer"],
         ValidAudience = config["JwtSettings:Audience"],
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["JwtSettings:Key"]!))
@@ -56,12 +59,9 @@ builder.Services.AddAuthentication(x =>
 
 builder.Services.AddAuthorization(options =>
 {
-    options.AddPolicy(JWT_Identity.LibrarianPolicyName, p =>
+    options.AddPolicy("admin", p =>
         p.RequireClaim("Role", "Librarian"));
 });
-
-builder.Services.AddIdentity<User, IdentityRole>()
-                .AddEntityFrameworkStores<AppDatabaseContext>();
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddEndpointsApiExplorer();

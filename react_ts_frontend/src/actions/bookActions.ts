@@ -76,6 +76,9 @@ export const deleteBook = (id: number): ThunkAction => {
       })
       .catch((err) => {
         console.error(err);
+        if (err.response.status === 403) {
+          alert('You do not have permission to delete this book.');
+        }
       });
   };
 };
@@ -124,6 +127,9 @@ export const updateBook = (id: number, book: Book): ThunkAction => {
       })
       .catch((err) => {
         console.error(err);
+        if (err.response.status === 400) {
+          alert('Wrong book credentials');
+        }
       });
   };
 };

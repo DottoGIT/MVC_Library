@@ -132,7 +132,7 @@ namespace MVC_Library.Controllers
             {
                 claims.Add(new Claim("Role", "User"));
             }
-
+            var x = _configuration["JwtSettings:Key"];
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtSettings:Key"]!));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 

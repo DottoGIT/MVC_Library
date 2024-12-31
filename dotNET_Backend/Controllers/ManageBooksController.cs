@@ -96,7 +96,7 @@ namespace MVC_Library.Controllers
 
 
         [HttpDelete("{id}")]
-        [Authorize(Policy = JWT_Identity.LibrarianPolicyName)]
+        [Authorize(Policy = "admin")]
         public async Task<IActionResult> Delete(int id)
         {
             var book = await _bookRepository.GetByIdAsync(id);
