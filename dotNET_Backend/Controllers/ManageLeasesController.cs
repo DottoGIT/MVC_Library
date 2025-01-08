@@ -1,96 +1,137 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using MVC_Library.Data;
 using MVC_Library.Data.Enums;
 using MVC_Library.Data.Interfaces;
 using MVC_Library.Models;
+using MVC_Library.ViewModel;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-using static System.Reflection.Metadata.BlobBuilder;
 
 namespace MVC_Library.Controllers
 {
-    public class ManageLeasesController : Controller
+    [ApiController]
+    [Route("api/[controller]")]
+    public class ManageLeasesController : ControllerBase
     {
         private readonly ILeaseRepository _leaseRepository;
+        private readonly UserManager<User> _userManager;
         private readonly int _pageSize = 9;
 
-        public ManageLeasesController(ILeaseRepository leaseRepository)
+        public ManageLeasesController(ILeaseRepository leaseRepository, UserManager<User> userManager)
         {
             _leaseRepository = leaseRepository;
+            _userManager = userManager;
         }
 
-        public async Task<IActionResult> Index(string searchString, bool showAwaiting = false, bool showActive = false, bool showClosed = false, bool showDeclined = false, int page = 1)
+        [HttpGet("{searchString?}")]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetLeases(
+            string searchString = null,
+            [FromQuery] bool showAwaiting = false,
+            [FromQuery] bool showActive = false,
+            [FromQuery] bool showClosed = false,
+            [FromQuery] bool showDeclined = false,
+            [FromQuery] int page = 1)
         {
-            IEnumerable<Lease> leases = await _leaseRepository.GetSortedLeasesBySearchAndCheckboxes(
+            var leases = await _leaseRepository.GetSortedLeasesBySearchAndCheckboxes(
                 searchString,
                 showAwaiting,
                 showActive,
                 showClosed,
-            showDeclined
+                showDeclined
             );
 
-            ViewBag.TotalPages = (int)(Math.Ceiling(leases.Count() / (double)_pageSize));
+            var totalItems = leases.Count();
+            var totalPages = (int)Math.Ceiling(totalItems / (double)_pageSize);
+
             leases = leases.Skip((page - 1) * _pageSize).Take(_pageSize);
 
-            return View(leases);
+            return Ok(new
+            {
+                Data = leases,
+                Pagination = new
+                {
+                    CurrentPage = page,
+                    TotalPages = totalPages
+                }
+            });
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Accept(int id)
+        [HttpPost()]
+        [Authorize(Policy = "user")]
+        public IActionResult CreateReservation([FromBody] LeaseVM leaseVM)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(new { message = "Invalid reservation data." });
+            }
+
+            var lease = new Lease
+            {
+                LeaseDate = DateTime.Now,
+                State = LeaseState.Reservation,
+                UserId = leaseVM.UserId,
+                BookId = leaseVM.BookId
+            };
+
+            _leaseRepository.Add(lease);
+
+            return Ok();
+        }
+
+        [HttpPut("{id}/accept")]
+        [Authorize(Policy = "admin")]
+        public async Task<IActionResult> AcceptLease(int id)
         {
             var lease = await _leaseRepository.GetByIdAsync(id);
             if (lease == null || lease.State != LeaseState.Reservation)
             {
-                TempData["ResultMessage"] = "Lease not found or cannot be accepted.";
-                return RedirectToAction("Index");
+                return NotFound(new { Message = "Lease not found or cannot be accepted." });
             }
 
             try
             {
                 lease.State = LeaseState.Active;
                 lease.Version = Guid.NewGuid();
-                Thread.Sleep(5000);
                 _leaseRepository.Save();
 
-                TempData["ResultMessage"] = "Lease has been accepted and is now active.";
+                return Ok();
             }
             catch (DbUpdateConcurrencyException)
             {
-                TempData["ResultMessage"] = "The lease record was updated by another librarian. Changes are not saved.";
+                return Conflict(new { Message = "The lease record was updated by another librarian. Changes are not saved." });
             }
-
-            return RedirectToAction("Index");
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Decline(int id)
+        [HttpPut("{id}/decline")]
+        [AllowAnonymous]
+        public async Task<IActionResult> DeclineLease(int id)
         {
             var lease = await _leaseRepository.GetByIdAsync(id);
             if (lease == null || lease.State != LeaseState.Reservation)
             {
-                TempData["ResultMessage"] = "Lease not found or cannot be declined.";
-                return RedirectToAction("Index");
+                return NotFound(new { Message = "Lease not found or cannot be declined." });
             }
 
             lease.State = LeaseState.Declined;
             lease.Version = Guid.NewGuid();
             _leaseRepository.Save();
 
-            TempData["ResultMessage"] = "Lease has been declined.";
-            return RedirectToAction("Index");
+
+            return Ok();
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Close(int id)
+        [HttpPut("{id}/close")]
+        [Authorize(Policy = "admin")]
+        public async Task<IActionResult> CloseLease(int id)
         {
             var lease = await _leaseRepository.GetByIdAsync(id);
             if (lease == null || lease.State != LeaseState.Active)
             {
-                TempData["ResultMessage"] = "Lease not found or cannot be closed.";
-                return RedirectToAction("Index");
+                return NotFound(new { Message = "Lease not found or cannot be closed." });
             }
 
             lease.State = LeaseState.Closed;
@@ -98,9 +139,7 @@ namespace MVC_Library.Controllers
             lease.Version = Guid.NewGuid();
             _leaseRepository.Save();
 
-            TempData["ResultMessage"] = "Lease has been closed.";
-            return RedirectToAction("Index");
+            return Ok();
         }
-
     }
 }

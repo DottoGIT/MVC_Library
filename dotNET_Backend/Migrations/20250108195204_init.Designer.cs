@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MVC_Library.Migrations
 {
     [DbContext(typeof(AppDatabaseContext))]
-    [Migration("20241230200250_JWT_Migration_With_Identity")]
-    partial class JWT_Migration_With_Identity
+    [Migration("20250108195204_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -308,7 +308,7 @@ namespace MVC_Library.Migrations
             modelBuilder.Entity("MVC_Library.Models.Lease", b =>
                 {
                     b.HasOne("MVC_Library.Models.Book", "Book")
-                        .WithMany("HistoryOfLeases")
+                        .WithMany()
                         .HasForeignKey("BookId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -373,11 +373,6 @@ namespace MVC_Library.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("MVC_Library.Models.Book", b =>
-                {
-                    b.Navigation("HistoryOfLeases");
                 });
 #pragma warning restore 612, 618
         }

@@ -305,7 +305,7 @@ namespace MVC_Library.Migrations
             modelBuilder.Entity("MVC_Library.Models.Lease", b =>
                 {
                     b.HasOne("MVC_Library.Models.Book", "Book")
-                        .WithMany("HistoryOfLeases")
+                        .WithMany()
                         .HasForeignKey("BookId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -370,11 +370,6 @@ namespace MVC_Library.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("MVC_Library.Models.Book", b =>
-                {
-                    b.Navigation("HistoryOfLeases");
                 });
 #pragma warning restore 612, 618
         }

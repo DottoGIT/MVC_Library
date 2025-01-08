@@ -19,30 +19,30 @@ export const initialState: BookState = {
 
 export const bookReducer = (state = initialState, action: actions.BookAction): BookState => {
     switch (action.type) {
-      case actions.ACTION_TYPES.FETCH:
+      case actions.BOOK_ACTION_TYPES.FETCH:
         return {
           ...state,
           list: [...action.payload.books],
           pagination: action.payload.pagination,
         };
-      case actions.ACTION_TYPES.CREATE:
+      case actions.BOOK_ACTION_TYPES.CREATE:
         return {
           ...state,
           list: [action.payload, ...state.list],
         };
-      case actions.ACTION_TYPES.UPDATE:
+      case actions.BOOK_ACTION_TYPES.UPDATE:
         return {
           ...state,
           list: state.list.map((book) =>
             book.id === action.payload.id ? { ...book, ...action.payload } : book
           ),
         };
-      case actions.ACTION_TYPES.DELETE:
+      case actions.BOOK_ACTION_TYPES.DELETE:
         return {
           ...state,
           list: state.list.filter((book) => book.id !== action.payload),
         };
-      case actions.ACTION_TYPES.MARK_UNAVAILABLE:
+      case actions.BOOK_ACTION_TYPES.MARK_UNAVAILABLE:
         return {
           ...state,
           list: state.list.map((book) =>

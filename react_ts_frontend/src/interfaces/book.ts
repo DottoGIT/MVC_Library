@@ -7,5 +7,6 @@ export interface Book {
     price: number;
     isPernamentlyUnavailable: boolean;
     isReserved: boolean;
+    canBeDeleted?: boolean;
 }
   

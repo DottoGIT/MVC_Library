@@ -20,6 +20,7 @@ namespace MVC_Library.Data.Interfaces
 
         bool UserHasLeases(string userId);
         bool BookHasLeases(int bookId);
+        bool BookHasActiveLeases(int bookId);
         void Add(Lease lease);
         void Update(Lease lease);
         void Delete(Lease lease);

@@ -27,6 +27,7 @@ namespace MVC_Library.Controllers
         }
 
         [HttpGet("{searchString?}")]
+        [AllowAnonymous]
         public async Task<IActionResult> GetBooks(string searchString = null, int page = 1)
         {
             var books = await _bookRepository.GetSearchedBooks(searchString);
@@ -39,7 +40,8 @@ namespace MVC_Library.Controllers
                 Publisher = b.Publisher,
                 YearOfPublication = b.YearOfPublication,
                 IsPernamentlyUnavailable = b.IsPernamentlyUnavailable,
-                IsReserved = _leaseRepository.BookHasLeases(b.Id),
+                IsReserved = _leaseRepository.BookHasActiveLeases(b.Id),
+                canBeDeleted = !_leaseRepository.BookHasLeases(b.Id),
                 Price = b.Price
             }).ToList();
 
@@ -58,6 +60,7 @@ namespace MVC_Library.Controllers
         }
 
         [HttpPost]
+        [Authorize(Policy = "admin")]
         public IActionResult Create([FromBody] Book book)
         {
             if (!ModelState.IsValid)
@@ -70,6 +73,7 @@ namespace MVC_Library.Controllers
 
 
         [HttpPut("{id}")]
+        [Authorize(Policy = "admin")]
         public async Task<IActionResult> Edit(int id, BookVM bookVM)
         {
             if (!ModelState.IsValid)
@@ -117,6 +121,7 @@ namespace MVC_Library.Controllers
 
 
         [HttpPut("{id}/mark-unavailable")]
+        [Authorize(Policy = "admin")]
         public async Task<IActionResult> MarkAsPermanentlyUnavailable(int id)
         {
             var book = await _bookRepository.GetByIdAsync(id);

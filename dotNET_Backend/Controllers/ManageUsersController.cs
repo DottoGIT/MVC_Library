@@ -11,6 +11,8 @@ using static System.Reflection.Metadata.BlobBuilder;
 
 namespace MVC_Library.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class ManageUsersController : Controller
     {
         private readonly IUserRepository _userRepository;
@@ -23,10 +25,12 @@ namespace MVC_Library.Controllers
             _userManager = userManager;
         }
 
-        public async Task<IActionResult> Index(string searchString, int page = 1)
+        [HttpGet("{searchString?}")]
+        [Authorize(Policy = "admin")]
+        public async Task<IActionResult> Index(string searchString = null, int page = 1)
         {
             IEnumerable<User> users = await _userRepository.GetSearchedUsers(searchString);
-            ViewBag.TotalPages = (int)(Math.Ceiling(users.Count() / (double)_pageSize));
+            int totalPages = (int)(Math.Ceiling(users.Count() / (double)_pageSize));
             users = users.Skip((page - 1) * _pageSize).Take(_pageSize);
             var model = new List<UserRoleVM>();
             foreach (var user in users)
@@ -38,7 +42,16 @@ namespace MVC_Library.Controllers
                     IsLibrarian = isLibrarian
                 });
             }
-            return View(model);
+
+            return Ok(new
+            {
+                Data = users,
+                Pagination = new
+                {
+                    CurrentPage = page,
+                    TotalPages = totalPages
+                }
+            });
         }
     }
 }

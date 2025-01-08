@@ -8,6 +8,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace MVC_Library.Controllers
@@ -30,6 +31,7 @@ namespace MVC_Library.Controllers
         }
 
         [HttpPost("register")]
+        [AllowAnonymous]
         public async Task<IActionResult> Create(UserRegisterVM registerVM)
         {
             if (!ModelState.IsValid)
@@ -73,6 +75,7 @@ namespace MVC_Library.Controllers
         }
 
         [HttpPost("login")]
+        [AllowAnonymous]
         public async Task<IActionResult> Login(UserLoginVM loginVM)
         {
             if (!ModelState.IsValid)
@@ -80,7 +83,7 @@ namespace MVC_Library.Controllers
                 return BadRequest(new { message = "Invalid data, please check your input." });
             }
 
-            var user = await _userManager.FindByNameAsync(loginVM.UserName);
+            var user = await _userManager.FindByNameAsync(loginVM.userName);
             if (user == null)
             {
                 return Unauthorized(new { message = "Invalid username or password." });
@@ -93,14 +96,15 @@ namespace MVC_Library.Controllers
             }
 
             var token = GenerateJwtToken(user);
-            return Ok(new { token, user = new { user.UserName, user.Email, user.FirstName, user.LastName } });
+            return Ok(new { token, user = new { user.Id, user.UserName, user.Email, user.FirstName, user.LastName, user.Role } });
         }
 
 
-        [HttpPost("delete")]
-        public async Task<IActionResult> Delete()
+        [HttpDelete("{id}/delete")]
+        [Authorize(Policy = "user")]
+        public async Task<IActionResult> Delete(string id)
         {
-            var user = await _userManager.GetUserAsync(User);
+            var user = await _userManager.FindByIdAsync(id);
             if (user == null)
             {
                 return BadRequest(new { message = "Account deletion was unsuccessful. Please try again later." });

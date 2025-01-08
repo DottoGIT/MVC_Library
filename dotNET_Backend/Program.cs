@@ -61,6 +61,9 @@ builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("admin", p =>
         p.RequireClaim("Role", "Librarian"));
+
+    options.AddPolicy("user", p =>
+        p.RequireClaim("Role", "User"));
 });
 
 builder.Services.AddControllersWithViews();

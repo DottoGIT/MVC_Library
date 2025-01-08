@@ -13,5 +13,6 @@ namespace MVC_Library.ViewModel
         public required decimal Price {  get; set; }
         public bool IsPernamentlyUnavailable { get; set; }
         public bool IsReserved { get; set; }
+        public bool canBeDeleted { get; set; }
     }
 }

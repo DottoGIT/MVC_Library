@@ -1,8 +1,11 @@
 import { combineReducers } from "redux";
 import { bookReducer } from "./bookReducer.ts";
-import { userReducer } from "./userReducer.ts";
+import { userListReducer, userReducer } from "./userReducer.ts";
+import { leaseReducer } from "./leaseReducer.ts";
 
 export const reducers = combineReducers({
     bookReducer,
-    userReducer
+    userReducer,
+    userListReducer,
+    leaseReducer
 });

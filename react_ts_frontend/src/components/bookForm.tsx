@@ -31,7 +31,7 @@ const BookForm: React.FC<BookFormProps> = ({ createBook, updateBook, bookToEdit,
         yearOfPublication: yearOfPublication,
         price: price,
         isPernamentlyUnavailable,
-        isReserved
+        isReserved,
       };
   
 

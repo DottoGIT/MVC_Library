@@ -78,6 +78,12 @@ namespace MVC_Library.Repository
             return _context.Leases.Any(l => l.BookId == bookId);
         }
 
+        public bool BookHasActiveLeases(int bookId)
+        {
+            return _context.Leases.Any(l => l.BookId == bookId && l.State != LeaseState.Closed && l.State != LeaseState.Declined);
+        }
+
+
         public async Task<IEnumerable<Lease>> GetAll()
         {
             return await _context.Leases

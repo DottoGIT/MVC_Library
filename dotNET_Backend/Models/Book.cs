@@ -12,6 +12,5 @@ namespace MVC_Library.Models
         [Required] public required int YearOfPublication{ get; set; }
         [Required, Column(TypeName = "decimal(6,2)")] public required decimal Price { get; set; }
         public bool IsPernamentlyUnavailable { get; set; } = false;
-        public List<Lease> HistoryOfLeases { get; set; } = new List<Lease>();
     }
 }

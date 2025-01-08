@@ -22,15 +22,11 @@ const ManageBooksList: React.FC<PropsFromRedux> = ({ booksList, pagination, fetc
     fetchBooks(searchString, page);
   };
   const handleDelete = (id: number) => {
-    if (window.confirm("Are you sure you want to delete this book?")) {
-      deleteBook(id);
-    }
+    deleteBook(id);
   };
 
   const handleMarkAsUnavailable = (id: number) => {
-    if (window.confirm("Are you sure you want to mark this book as unavailable?")) {
-      markAsUnavailable(id);
-    }
+    markAsUnavailable(id);
   };
 
   const handleAddBookClick = () => {
@@ -96,7 +92,7 @@ const ManageBooksList: React.FC<PropsFromRedux> = ({ booksList, pagination, fetc
                 <span className="badge text-bg-danger rounded-pill">Unavailable</span>
               ) : (
                 <>
-                  {book.isReserved ? (
+                  {!book.canBeDeleted ? (
                     <button className="btn btn-sm btn-warning me-2" onClick={() => handleMarkAsUnavailable(book.id)}> Mark as Unavailable </button>
                   ) : (
                     
