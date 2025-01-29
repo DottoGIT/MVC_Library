@@ -1,3 +1,11 @@
+# MVC_Library
+Aplikacja webowa z podziałem na backend (ASP.NET MVC C#) oraz frontend (React TS). Funkcjonalność aplikacji składa się z weryfikacji oraz autoryzacji użytkownika, zarządzaniem tokenami JWT oraz obsługi CRUD modeli biblioteki
+
+## Zdjęcia
+![](./img/screen1.png)
+![](./img/screen2.png)
+![](./img/screen3.png)
+
 ## Projekt 1: Biblioteka ASP.NET MVC
 #### Uruchomienie
 Projekt uruchamiany jest poprzez docker-compose komendą
