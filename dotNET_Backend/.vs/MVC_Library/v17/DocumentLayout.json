@@ -5,22 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\maciej\\desktop\\mvc_library\\dotnet_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\maciej\\desktop\\mvc_library\\dotnet_backend\\controllers\\manageuserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:controllers\\manageuserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\maciej\\desktop\\mvc_library\\dotnet_backend\\controllers\\manageleasescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:controllers\\manageleasescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\maciej\\desktop\\mvc_library\\dotnet_backend\\controllers\\managebookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:controllers\\managebookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|c:\\users\\maciej\\desktop\\mvc_library\\dotnet_backend\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8A77DA1-9EE4-48A4-AE76-90D9A4846A65}|MVC_Library.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,7 +13,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 123,
+          "DockedWidth": 200,
           "SelectedChildIndex": 0,
           "Children": [
             {
@@ -40,59 +24,10 @@
               "RelativeDocumentMoniker": "appsettings.json",
               "ToolTip": "C:\\Users\\Maciej\\Desktop\\MVC_Library\\dotNET_Backend\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAADtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-08T19:58:57.507Z",
+              "WhenOpened": "2025-01-29T16:53:01.991Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ManageBooksController.cs",
-              "DocumentMoniker": "C:\\Users\\Maciej\\Desktop\\MVC_Library\\dotNET_Backend\\Controllers\\ManageBooksController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ManageBooksController.cs",
-              "ToolTip": "C:\\Users\\Maciej\\Desktop\\MVC_Library\\dotNET_Backend\\Controllers\\ManageBooksController.cs",
-              "RelativeToolTip": "Controllers\\ManageBooksController.cs",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-08T19:54:08.312Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ManageUsersController.cs",
-              "DocumentMoniker": "C:\\Users\\Maciej\\Desktop\\MVC_Library\\dotNET_Backend\\Controllers\\ManageUsersController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ManageUsersController.cs",
-              "ToolTip": "C:\\Users\\Maciej\\Desktop\\MVC_Library\\dotNET_Backend\\Controllers\\ManageUsersController.cs",
-              "RelativeToolTip": "Controllers\\ManageUsersController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-08T19:54:07.379Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ManageLeasesController.cs",
-              "DocumentMoniker": "C:\\Users\\Maciej\\Desktop\\MVC_Library\\dotNET_Backend\\Controllers\\ManageLeasesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ManageLeasesController.cs",
-              "ToolTip": "C:\\Users\\Maciej\\Desktop\\MVC_Library\\dotNET_Backend\\Controllers\\ManageLeasesController.cs",
-              "RelativeToolTip": "Controllers\\ManageLeasesController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAH8AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-08T19:53:57.303Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\Users\\Maciej\\Desktop\\MVC_Library\\dotNET_Backend\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
-              "ToolTip": "C:\\Users\\Maciej\\Desktop\\MVC_Library\\dotNET_Backend\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "Controllers\\LoginController.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAAAGcAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-08T19:53:04.103Z"
             }
           ]
         }

@@ -71,8 +71,8 @@ builder.Services.AddEndpointsApiExplorer();
 
 var app = builder.Build();
 
-//using (var serviceScope = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope())
-//{
+// using (var serviceScope = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope())
+// {
 //    var logger = serviceScope.ServiceProvider.GetRequiredService<ILogger<Program>>();
 //    var db = serviceScope.ServiceProvider.GetRequiredService<AppDatabaseContext>().Database;
 
@@ -92,7 +92,7 @@ var app = builder.Build();
 //    {
 //        logger.LogError(ex, "An error occurred while migrating the database.");
 //    }
-//}
+// }
 
 await Seed.SeedUsers(app);
 Seed.SeedData(app);

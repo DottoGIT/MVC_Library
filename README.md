@@ -3,7 +3,7 @@
 Projekt uruchamiany jest poprzez docker-compose komendą
 ``` sh
     sudo docker build .
-    sudo docker-compose up
+    docker-compose up --build
 ```
 Po paru minutach aplikacja będzie dostępna pod adresem localhost na porcie 8080
 #### Dane inicjacyjne bazy danych
@@ -24,11 +24,12 @@ W celu zbadania działania obsługi równoległości, dodano nowego użytkownika
 
 Obsługa równoległości została zrealizowana poprzez ConcurrencyCheck
 
-## Projekt 3: Przeniesienie Frontendu do React TS
+## Projekt 3 i 4: Przeniesienie Frontendu do React TS
 Zamiana kontrolerów z widokami na kontrolery API w plikach manageLogin oraz manageBooks, dzięki czemu możliwa jest obsługa książek oraz logowania przy użyciu frontendu w React TS.
 ##### Uruchamianie
 Backend w .NET uruchamiany jest jak poprzednio, frontend uruchomić należy poleceniem
 ``` sh
 cd react_ts_frontend
+npm install
 npm start
 ```
